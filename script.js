@@ -3,6 +3,7 @@ const contact = document.querySelector(".contact");
 const hiringMe = document.querySelector(".hiring-me");
 const mainMenu = document.querySelector(".main-menu");
 const mainLinks = document.querySelector(".main-links");
+const sections = document.querySelectorAll("section");
 
 lis.forEach((li) => {
     li.addEventListener("click", () => {
@@ -30,3 +31,15 @@ hiringMe.addEventListener("click", () => {
 mainMenu.addEventListener("click", () => {
     mainLinks.classList.toggle("active");
 })
+
+function changeLinkState () {
+    let index = sections.length;
+    while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    lis.forEach((li) => {
+        li.classList.remove("active");
+    })
+    lis[index].classList.add("active");
+}
+    changeLinkState();
+
+window.addEventListener("scroll", changeLinkState)
