@@ -3,84 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="aos-master/aos.css">
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
     <title>Robex</title>
     <link rel="icon" href="https://i.postimg.cc/kgLK8N0F/Logo-2.png" />
   </head>
   <body>
     <div class="header">
       <div class="container">
-        <div class="logo"><img src="new logo.png" alt="" /></div>
+        <div class="logo" ><a href="#homed" ><img src="images/new logo.png" alt="" /></a></div>
         <div class="links">
-          <ul da>
-            <li><a href="#home" class="active">Home</a></li>
+          <ul>
+            <li><a href="#homed">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skilled">Skills</a></li>
+            <li><a href="#projected">Projects</a></li>
           </ul>
         </div>
-        <div class="contact"><div class="text">Contact</div>
+        <div class="contact">
+          <a href="#contacted" class="text">Contact</a>
           <div class="main-menu active"><i class="fas fa-bars"></i></div>
         </div>
 
       </div>
     </div>
+    <div class="skilled" id="homed"></div>
     <div class="home" id="home">
       <div class="container">
         <div class="info">
-          <h1>Hi, I'm Ibrahem <span>Albialy</span></h1>
-          <p>
-            Hello there! My name is Ibrahem Albialy, and I am a passionate
-            front-end web developer with two years of experience in crafting
-            engaging and user-friendly websites. I specialize in turning ideas
-            into reality through code, with a keen eye for detail and a knack
-            for creating seamless user experiences.
-          </p>
-          <button>Hiring Me</button>
+          <h1>Hi, I'm <span class="name">Ibrahem Albialy.</span></h1>
+          <h1>I am a <span class="front">Front-End Web Developer</span></h1>
         </div>
         <div class="img">
         <img src="https://i.postimg.cc/RZwVsc3T/Albialy.png" alt=""/></div>
       </div>
     </div>
+    <div class="skilled" id="about"></div>
+    <div class="about">
+      <h1>About</h1>
+      <div class="container">
+    <p>
+      Hello there! My name is Ibrahem Albialy, and I am a passionate
+      front-end web developer with two years of experience in crafting
+      engaging and user-friendly websites. I specialize in turning ideas
+      into reality through code, with a keen eye for detail and a knack
+      for creating seamless user experiences.
+    </p>
+    <button><a href="#contacted" class="hiring-me">Hiring Me</a></button>
+  </div>
+    <div class="skilled" id="skilled"></div>
     <div class="skills" id="skills">
       <h1>Skills</h1>
       <div class="container">
-        <div class="skill-box">
+        <div class="skill-box" data-aos="fade-right" data-aos-duration="1200">
           <div class="skill-img">
-            <img src="html5-logo-31813.png" alt="" />
+            <img src="images/html5-logo-31813.png" alt="" />
           </div>
           <div class="skill-name">HTML</div>
         </div>
-        <div class="skill-box">
+        <div class="skill-box"  data-aos="fade-down" data-aos-duration="1200">
           <div class="skill-img">
-            <img src="icons8-css-240.png" alt="" />
+            <img src="images/icons8-css-240.png" alt="" />
           </div>
           <div class="skill-name">CSS</div>
         </div>
-        <div class="skill-box">
+        <div class="skill-box" data-aos="fade-left" data-aos-duration="1200">
           <div class="skill-img">
-            <img src="icons8-javascript-240.png" alt="" />
+            <img src="images/icons8-javascript-240.png" alt="" />
           </div>
           <div class="skill-name">JavaScript</div>
         </div>
-        <div class="skill-box">
+        <div class="skill-box"  data-aos="fade-up" data-aos-duration="1200">
           <div class="skill-img">
-            <img src="icons8-tailwind-css-240.png" alt="" /></div>
+            <img src="images/icons8-tailwind-css-240.png" alt="" /></div>
           <div class="skill-name">TailWind</div>
         </div>
-        <div class="skill-box">
+        <div class="skill-box"  data-aos="fade-up" data-aos-duration="1200">
           <div class="skill-img">
-            <img src="icons8-react-400.png" alt="" /></div>
+            <img src="images/icons8-react-400.png" alt="" /></div>
           <div class="skill-name">React JS</div>
         </div>
-        <div class="skill-box">
+        <div class="skill-box"   data-aos="fade-left" data-aos-duration="1200">
           <div class="skill-img">
-            <img src="icons8-github-512.png" alt="" /></div>
+            <img src="images/icons8-github-512.png" alt="" /></div>
           <div class="skill-name">Git Hub</div>
         </div>
       </div>
     </div>
+    <div class="skilled" id="projected"></div>
+    <div class="projects">
+      <h1>Projects</h1>
+      <div class="container">
+        <div class="project-box" data-aos="zoom-in">
+          <div class="project-img"><img src="images/logo.jpg" alt="" /></div>
+            <div class="project-name">Legacy Code</div>
+        </div>
+        <div class="project-box" data-aos="zoom-in">
+          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
+          <div class="project-img"><img src="images/logo.jpg" alt="" /></div>
+            <div class="project-name">Robofriends</div>
+        </div>
+        <div class="project-box" data-aos="zoom-in">
+          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
+          <div class="project-img"><img src="images/logo.jpg" alt="" /></div>
+            <div class="project-name">Robofriends</div>
+        </div>
+        <div class="project-box" data-aos="zoom-in">
+          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
+          <div class="project-img"><img src="images/logo.jpg" alt="" /></div>
+            <div class="project-name">Robofriends</div>
+        </div>
+        <div class="project-box" data-aos="zoom-in">
+          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
+          <div class="project-img"><img src="images/logo.jpg" alt="" /></div>
+            <div class="project-name">Robofriends</div>
+        </div>
+        <div class="project-box" data-aos="zoom-in">
+          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
+          <div class="project-img"><img src="images/logo.jpg" alt="" /></div>
+            <div class="project-name">Robofriends</div>
+        </div>
+      </div>
+    </div>
+    <div class="skilled" id="contacted"></div>
+    <div class="contact-sec">
+      <h1>Contact</h1>
+      <div class="container">
+        <div class="named">
+        <input class="name" type="text" name="name" id="name" placeholder="Name" data-aos="fade-right" data-aos-duration="1200">
+        <input class="phone" type="phone" name="phone" id="phone" placeholder="phone"  data-aos="fade-left" data-aos-duration="1200"></div>
+        <input type="email" name="email" id="email" placeholder="Email"  data-aos="fade-up" data-aos-duration="1200">
+        <input type="message" name="message" id="message" placeholder="Message" class="message"  data-aos="fade-up" data-aos-duration="1200">
+        <button class="button"  data-aos="fade-up" data-aos-duration="1200">Send</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+      <div class="logo">
+      <img src="images/new logo.png" alt="">
+      <div class="social">
+        <div class="icon-box facebook"><a href="https://www.facebook.com/iRobex/"><i class="fab fa-facebook-f"></i></a></div>
+        <div class="icon-box github"><a href="https://github.com/ibrahemalbialy14"><i class="fab fa-github"></i></a></div>
+        <div class="icon-box linkedin"><a href="https://www.linkedin.com/in/ibrahimalbialy/"><i class="fab fa-linkedin-in"></i></a></div>
+        <div class="icon-box whatsapp"><a href="https://twitter.com/ibrahimalbialy"><i class="fab fa-whatsapp"></i></a></div>
+      </div>
+      </div>
+      <p>All Rights Reserved For <span>Ibrahem Albialy</span></p>
+    </div>
+    </footer>
+    <script src="aos-master/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/d1ccbf5f6d.js" crossorigin="anonymous"></script>
   </body>
