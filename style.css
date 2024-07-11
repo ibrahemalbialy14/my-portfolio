@@ -303,8 +303,7 @@ background-color: var(--main-color);
   color: white;
   text-align: center;
 }
-.skills::before,
-.skills::after {
+.skills::before {
   content: "";
   width: 500px;
   height: 500px;
@@ -317,10 +316,6 @@ background-color: var(--main-color);
 .skills::before{
   top: 1240px;
   left: -250px;
-}
-.skills::after {
-  bottom: -1921px;
-  right: -250px;
 }
 .skills h1 {
   margin-bottom: 40px;
@@ -377,6 +372,26 @@ left: 190px;
   width: 80px;
   height: 80px;
   margin-bottom: 5px;
+}
+.projects {
+  padding: 2px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.projects::before {
+  content: "";
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  z-index: -1;
+  filter: blur(146px);
+}
+.projects::before{
+  top: 86px;
+  right: -300px;
 }
 .projects .container {
   display: grid;
