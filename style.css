@@ -303,7 +303,8 @@ background-color: var(--main-color);
   color: white;
   text-align: center;
 }
-.skills::before {
+.skills::before,
+.skills::after {
   content: "";
   width: 500px;
   height: 500px;
@@ -312,8 +313,14 @@ background-color: var(--main-color);
   background-color: var(--main-color);
   z-index: -1;
   filter: blur(146px);
+}
+.skills::before{
   top: 1240px;
   left: -250px;
+}
+.skills::after {
+  bottom: -1921px;
+  right: -250px;
 }
 .skills h1 {
   margin-bottom: 40px;
@@ -504,7 +511,6 @@ gap: 10px;
   flex-wrap: wrap;
   gap: 10px;
   transition: 2s ease-in-out;
-  margin-bottom: 15px;
 }
 .footer .container .logo .social .icon-box i {
 
@@ -572,8 +578,15 @@ gap: 10px;
   .skills {
     padding: 2px 1px;
   }
+  .footer .container span {
+    flex-wrap: nowrap;
+  }
   .footer .container .logo {
     justify-content: center;
+
+}
+.footer .container .logo .social {
+margin-bottom: 15px;
 }
 }
 @media (max-width: 600px) {
@@ -587,7 +600,6 @@ gap: 10px;
 @media (max-width: 700px) {
   .skills .container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    /* gap: 10px; */
   }
 }
 @media (max-width: 770px) {
@@ -618,11 +630,6 @@ gap: 10px;
     height: 400px;
   }
 }
-/* @media (width: 1024px) { 
-  .skills .container {
-    gap: 85px;
-  }
-} */
 @keyframes move-animate {
   0%,
   100% {
