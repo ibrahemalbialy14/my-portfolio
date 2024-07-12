@@ -127,7 +127,7 @@ color: white;
   flex-direction: row;
 }
 .header .container .logo img {
-  max-width: 150px;
+  width: 139.13px;
   height: 30px;
   cursor: pointer;
 }
@@ -157,7 +157,7 @@ background-color: var(--main-color);
 .header .container .links ul a {
   margin: 0 30px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
   color: rgba(180, 180, 180, 0.9);
   letter-spacing: 1.2px;
   transition: 0.3s ease-in-out;
