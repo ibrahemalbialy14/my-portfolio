@@ -61,7 +61,7 @@
             front-end web developer with two years of experience in crafting
             engaging and user-friendly websites. I specialize in turning ideas
             into reality through code, with a keen eye for detail and a knack
-            for creating seamless user experiences.
+            for creating seamless user experiences and hight quality, performance, seo websites.
           </p>
           <button><a href="#contacted" class="hiring-me">Hiring Me</a></button>
         </div>
@@ -160,34 +160,27 @@
           <input
             class="name"
             type="text"
-            name="name"
-            id="name"
+            placeholder="Your Name"
+            id="userName"
             placeholder="Name"
             data-aos="fade-right"
             data-aos-duration="1200"
+            required
           />
           <input
             class="phone"
-            type="phone"
+            type="text"
             name="phone"
-            id="phone"
-            placeholder="phone"
+            id="userPhone"
+            placeholder="Your Phone Number"
             data-aos="fade-left"
             data-aos-duration="1200"
+            required
           />
         </div>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-        />
-        <input type="message" name="message" id="message" placeholder="Message" class="message" data-aos="fade-up" data-aos-duration="1200"/>
-        <button class="button" data-aos="fade-right" data-aos-duration="1000">
-          Send
-        </button>
+        <input type="email" class="email" name="email" id="userEmail" placeholder="Your Email" required data-aos="fade-up" data-aos-duration="1200"/>
+        <input type="message" name="message" id="userMessage" placeholder="Your Message" required class="message" data-aos="fade-up" data-aos-duration="1200"/>
+        <button type="button" id="sendButton" class="button" data-aos="fade-right" data-aos-duration="1000"> Send </button>
       </div>
     </div>
     <footer class="footer">
@@ -216,6 +209,8 @@
     <script> AOS.init();
     </script>
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/d1ccbf5f6d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </body>
 </html>
