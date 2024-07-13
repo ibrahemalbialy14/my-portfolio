@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/normalize.css" />
     <title>Robex</title>
     <link rel="icon" href="https://i.postimg.cc/kgLK8N0F/Logo-2.webp" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
     <div class="header">
@@ -42,8 +43,8 @@
     <div class="home" id="home">
       <div class="container">
         <div class="info">
-          <h1>Hi, I'm <span class="name">Ibrahem Albialy.</span></h1>
-          <h1>I am a <span class="front">Front-End Web Developer</span></h1>
+          <h1>Hi, I'm <span class="name">Ibrahem Albialy,</span></h1>
+          <h1>I am a <span class="front">Front-End Web Developer.</span></h1>
         </div>
         <div class="img">
           <img src="images/my photo.webp" alt="postimg" />
@@ -52,7 +53,7 @@
     </div>
     <section class="skilled" id="about"></section>
     <div class="about">
-      <h1>About</h1>
+      <h1 class="main-title">About</h1>
       <div class="container">
         <div class="info">
           <p>
@@ -74,7 +75,7 @@
     </div>
     <section class="skilled" id="skilled"></section>
     <div class="skills" id="skills">
-      <h1>Skills</h1>
+      <h1 class="main-title">Skills</h1>
       <div class="container">
         <div class="skill-box" data-aos="fade-right" data-aos-duration="1200">
           <div class="skill-img">
@@ -116,42 +117,44 @@
     </div>
     <section class="skilled" id="projected"></section>
     <div class="projects">
-      <h1>Projects</h1>
+      <h1 class="main-title">Projects</h1>
       <div class="container">
         <div class="project-box" data-aos="zoom-in" data-aos-duration="1200">
-          <div class="project-img"><img src="images/logo (1).webp" alt="logo" /></div>
+          <span class="project-img"><img src="images/logo (1).webp" alt="logo" /></span>
           <span class="project-name">Legacy Code</span>
+            <a href="http://example.com" class="Visit-link"><i class="fas fa-globe"></i>Visit</a>
         </div>
         <div class="project-box" data-aos="zoom-in" data-aos-duration="1200">
-          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
-          <div class="project-img"><img src="images/logo (1).webp" alt="logo" /></div>
-          <div class="project-name">Robofriends</div>
+          <span class="project-img"><img src="images/landing page.webp" alt="logo"/></span>
+          <span class="project-name">Landing Page</span>
+          <a href="https://ibrahemalbialy14.github.io/Landing-Page/" class="Visit-link"><i class="fas fa-globe"></i>Visit</a>
         </div>
         <div class="project-box" data-aos="zoom-in" data-aos-duration="1200">
-          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
-          <div class="project-img"><img src="images/logo (1).webp" alt="logo" /></div>
-          <div class="project-name">Robofriends</div>
+          <span class="project-img"><img src="images/html,css website.webp" alt="logo"/></span>
+          <span class="project-name">Albialy</span>
+          <a href="https://ibrahemalbialy14.github.io/Albialy/" class="Visit-link"><i class="fas fa-globe"></i>Visit</a>
         </div>
         <div class="project-box" data-aos="zoom-in" data-aos-duration="1200">
-          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
-          <div class="project-img"><img src="images/logo (1).webp" alt="logo" /></div>
-          <div class="project-name">Robofriends</div>
+          <span class="project-img"><img src="images/simple login form.webp" alt="logo"/></span>
+          <span class="project-name">Simple Login Form</span>
+            <a href="https://ibrahemalbialy14.github.io/simple-login-form/" class="Visit-link"><i class="fas fa-globe"></i>Visit</a>
         </div>
         <div class="project-box" data-aos="zoom-in" data-aos-duration="1200">
-          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
-          <div class="project-img"><img src="images/logo (1).webp" alt="logo" /></div>
-          <div class="project-name">Robofriends</div>
+          <span class="project-img"><img src="images/expanding cards.webp" alt="logo"/></span>
+          <span class="project-name">Expanding Cards</span>
+            <a href="https://ibrahemalbialy14.github.io/Expanding-Cards/" class="Visit-link"><i class="fas fa-globe"></i>Visit</a>
         </div>
         <div class="project-box" data-aos="zoom-in" data-aos-duration="1200">
-          <!-- <div class="link"><a href="https://github.com/IbrahemAlbialy/Robofriends"></a></div> -->
-          <div class="project-img"><img src="images/logo (1).webp" alt="logo" /></div>
-          <div class="project-name">Robofriends</div>
+          <span class="project-img"><img src="images/scroll animation.webp" alt="logo"/></span>
+          <span class="project-name">Scroll Animation</span>
+            <a href="https://ibrahemalbialy14.github.io/Scroll-Animation/" class="Visit-link"><i class="fas fa-globe"></i>Visit</a>
         </div>
       </div>
+      <div class="show-more">Show More</div>
     </div>
     <section class="skilled" id="contacted"></section>
     <div class="contact-sec">
-      <h1>Contact</h1>
+      <h1 class="main-title">Contact</h1>
       <div class="container">
         <div class="named">
           <input
@@ -182,7 +185,7 @@
           data-aos-duration="1200"
         />
         <input type="message" name="message" id="message" placeholder="Message" class="message" data-aos="fade-up" data-aos-duration="1200"/>
-        <button class="button" data-aos="fade-up" data-aos-duration="1200">
+        <button class="button" data-aos="fade-right" data-aos-duration="1000">
           Send
         </button>
       </div>
@@ -210,13 +213,9 @@
       </div>
     </footer>
     <script src="aos-master/aos.js"></script>
-    <script>
-      AOS.init();
+    <script> AOS.init();
     </script>
     <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/d1ccbf5f6d.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/d1ccbf5f6d.js" crossorigin="anonymous"></script>
   </body>
 </html>

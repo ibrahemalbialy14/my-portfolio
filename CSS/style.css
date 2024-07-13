@@ -7,6 +7,11 @@
   box-sizing: border-box;
   outline: none;
 }
+:root {
+  --main-color: rgb(17, 123, 222);
+  --alt-color: #040a24;
+  --main-transition: 0.3s;
+}
 ::-webkit-scrollbar {
   width: 7.5px;
 }
@@ -20,10 +25,6 @@
 ::selection {
   color: white;
   background-color: rgb(55, 131, 255);
-}
-:root {
-  --main-color: rgb(17, 123, 222);
-  --alt-color: #040a24;
 }
 html {
   scroll-behavior: smooth;
@@ -43,6 +44,45 @@ h1 {
   margin-bottom: 40px;
   letter-spacing: 1.1px;
   cursor: pointer;
+}
+.main-title {
+  position: relative;
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  transition: .4s;
+  border-top: 4px solid var(--main-color);
+  border-bottom: 4px solid var(--main-color);
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  height: 145%;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .4s;
+  background-color: var(--main-color);
+}
+.main-title::before {
+  right: 10px;
+}
+.main-title::after {
+  left: 10px;
+}
+.main-title:hover {
+  color: white;
+  border-radius: 14px;
+  background-color: var(--main-color);
+}
+.main-title:hover::before {
+  height: 100%;
+  right: 5px;
+}
+.main-title:hover::after {
+  height: 100%;
+  left: 5px;
 }
 .skilled {
   width: 100%;
@@ -92,8 +132,7 @@ transition: .5s ease-in-out;
 }
 .main-links ul li.active,
 .main-links ul li:hover {
-background-color: var(--main-color);
-color: white;
+  background: linear-gradient(90deg, var(--main-color), rgb(0, 80, 184));
 }
 .main-links ul a {
   margin: 0 30px;
@@ -102,7 +141,7 @@ color: white;
   color: white;
   cursor: pointer;
   letter-spacing: 1.2px;
-  transition: 0.3s ease-in-out;
+  transition: var(--main-transition) ease-in-out;
 }
 .main-links ul li:hover a,
 .main-links ul li.active a {
@@ -115,7 +154,7 @@ color: white;
   top: 0;
   backdrop-filter: blur(30px);
   background-color: rgba(255, 255, 255, 0.104);
-    -webkit-backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   width: 100vw;
   z-index: 190;
 }
@@ -152,7 +191,7 @@ cursor: pointer;
 }
 .header .container .links ul li.active,
 .header .container .links ul li:hover {
-background-color: var(--main-color);
+background: linear-gradient(90deg, var(--main-color), rgb(0, 80, 184));
 }
 .header .container .links ul a {
   margin: 0 30px;
@@ -160,7 +199,7 @@ background-color: var(--main-color);
   font-size: 16px;
   color: rgba(180, 180, 180, 0.9);
   letter-spacing: 1.2px;
-  transition: 0.3s ease-in-out;
+  transition: var(--main-transition) ease-in-out;
 }
 .header .container .links ul li:hover a,
 .header .container .links ul li.active a {
@@ -201,13 +240,14 @@ background-color: var(--main-color);
   height: 40px;
   font-weight: bold;
   letter-spacing: 1.2px;
-  background-color: var(--main-color);
+  background: linear-gradient(90deg, var(--main-color),var(--main-color));
   border-radius: 7px;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 1s;
 }
-.header .container .contact .text:hover {
-  filter: brightness(1.2);
+.header .container .contact .text:hover,
+.header .container .contact .text.active{
+  background: linear-gradient(90deg, var(--main-color), rgb(0, 80, 184));
 }
 .home {
   position: relative;
@@ -304,7 +344,7 @@ background-color: var(--main-color);
   color: white;
   letter-spacing: 1.2px;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: var(--main-transition) ease-in-out;
 }
 .about .container button:hover {
   filter: brightness(1.2);
@@ -392,6 +432,9 @@ left: 190px;
   margin-bottom: 5px;
 }
 .projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 2px 20px;
   color: white;
   text-align: center;
@@ -443,34 +486,89 @@ left: 190px;
   position: relative;
   cursor: pointer;
 }
-.projects .container .project-box:hover::after{
-  display: flex;
+.projects .container .project-box .Visit-link i {
+  font-size: 45px;
 }
-/* .projects .container .project-box::before, */
-.projects .container .project-box::after {
-  content: "Visit";
-  display: none;
+.projects .container .project-box .Visit-link {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  gap: 10px;
   position: absolute;
-  z-index: 2;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgb(0 0 0 / 28%);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   letter-spacing: 1.1px;
+  opacity: 0; 
+  font-size: 20px;
+  transition: opacity 0.3s ease;
 }
-.projects .container .project-box::after {
-  top: 0px;
-  left: 0px;
+
+.projects .container .project-box:hover .Visit-link{
+  opacity: 1;
 }
 .projects .container .project-box .project-img img{
-  width: 200px;
+  width: 250px;
   height: 200px;
   margin-bottom: 5px;
   border-radius: 6px;
+}
+.projects .show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 80px;
+  cursor: pointer;
+  border: 3px var(--main-color) solid;
+  font-size: 22px;
+  padding: 10px 20px;
+  width: fit-content;
+  height: 52px;
+  position: relative;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+.projects .show-more:hover {
+  color: white;
+  box-shadow: 0px 0px 29px 9px #5892ff;
+  transition-delay: 0.1s;
+}
+.projects .show-more::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+.projects .show-more::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+}
+
+.projects .show-more:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+
+.projects .show-more:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
 }
 .contact-sec {margin-bottom: 40px;}
 .contact-sec h1 {
@@ -681,5 +779,33 @@ margin-bottom: 15px;
 
   50% {
 transform: translateY(-20px);
+  }
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 60%;
+    height: 100%;
   }
 }
