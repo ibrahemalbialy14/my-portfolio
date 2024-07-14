@@ -331,7 +331,7 @@ h1 {
   margin-bottom: 20px;
   max-width: 500px;
   line-height: 1.5;
-  color: #6b7299;
+  color: #ffffff;
   font-size: 20px;
 }
 .about .container button {
@@ -734,6 +734,14 @@ h1 {
   .skills .container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
+  .home::after {
+    right: -330px;
+  }
+  .home .container .info .front{
+    background: linear-gradient(45deg, var(--main-color), var(--main-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff0;
+  }
 }
 @media (max-width: 770px) {
   .header .container .links ul a {
@@ -742,11 +750,6 @@ h1 {
   .home .container {
     flex-direction: column-reverse;
     height: auto;
-  }
-  .home .container .info .front {
-    background: linear-gradient(45deg, #3333ff, #00aaff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #fff0;
   }
   .about .container {
     flex-direction: column-reverse;
