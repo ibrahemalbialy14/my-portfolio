@@ -5,6 +5,7 @@ const mainMenu = document.querySelector(".main-menu");
 const mainLinks = document.querySelector(".main-links");
 const sections = document.querySelectorAll("section");
 const text = document.querySelector(".text")
+const inputs = document.querySelectorAll('input');
 lis.forEach((li) => {
     li.addEventListener("click", () => {
         lis.forEach((item) => {
@@ -50,10 +51,16 @@ document.getElementById("sendButton").onclick = function() {
     var userEmail = document.getElementById("userEmail").value;
     var userPhone = document.getElementById("userPhone").value;
     var userMessage = document.getElementById("userMessage").value;
-    if (!userName || !userEmail || !userPhone || !userMessage) {
-    console.log('Error: All fields are required.');
-    return;
+    if (userName && userEmail && userPhone && userMessage) {
+        alert("Your message has been sent successfully");
+    }else {
+        alert("Please fill all the fields");
+        return;
     }
+    inputs.forEach(function(input) {
+        input.value = '';
+        console.log("input is empty")
+    });
     var templateParams = {
     to_name: 'Ibrahem Albialy',
     from_name: userEmail,
